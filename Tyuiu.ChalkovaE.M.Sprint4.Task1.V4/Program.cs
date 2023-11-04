@@ -54,8 +54,27 @@ namespace Tyuiu.ChalkovaE.M.Sprint4.Task1.V4
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
-
-            Console.WriteLine($"Произведение нечетных элементов массива = " + ds.Calculate(nums));
+            int count = 0;
+            for (int i = 0; i <= nums.Length - 1; i++)
+            {
+                if (nums[i] >= 0 && nums[i] <= 9)
+                {
+                    count++;
+                }
+                else
+                {
+                    count = 0;
+                }
+            }
+            if (count == len)
+            {
+                Console.WriteLine("Произведение нечетных элементов массива = " + ds.Calculate(nums));
+            }
+            else
+            {
+                Console.WriteLine("Неверное значение ");
+            }
+            
 
             Console.ReadKey();
         }
